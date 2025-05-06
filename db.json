@@ -9,6 +9,11 @@
       "id": "f9ee",
       "email": "as@mail.ru",
       "password": "123"
+    },
+    {
+      "id": "e0b5",
+      "email": "inkar@mail.ru",
+      "password": "12345678"
     }
   ],
   "transactions": [
@@ -164,6 +169,30 @@
       "type": "expense",
       "color": "#500707",
       "userId": "00c4"
+    },
+    {
+      "id": "e1a5",
+      "name": "Зп",
+      "icon": "📁",
+      "type": "income",
+      "color": "#8a3d3d",
+      "userId": "e0b5"
+    },
+    {
+      "id": "c05e",
+      "name": "услуги ",
+      "icon": "📁",
+      "type": "expense",
+      "color": "#cccccc",
+      "userId": "e0b5"
+    },
+    {
+      "id": "195d",
+      "name": "продукты ",
+      "icon": "📁",
+      "type": "expense",
+      "color": "#cccccc",
+      "userId": "e0b5"
     }
   ]
 }

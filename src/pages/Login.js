@@ -3,6 +3,8 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { loginSuccess } from "../redux/slices/authSlice";
 import { useNavigate } from "react-router-dom";
+import styles from "./Login.module.css";
+
 
 function Login() {
   const dispatch = useDispatch();
@@ -40,26 +42,38 @@ function Login() {
   };
 
   return (
-    <div>
-      <h2>Вход</h2>
-      <form onSubmit={handleLogin}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          required
-          onChange={(e) => setEmail(e.target.value)}
-        /><br />
-        <input
-          type="password"
-          placeholder="Пароль"
-          value={password}
-          required
-          onChange={(e) => setPassword(e.target.value)}
-        /><br />
-        {error && <div style={{ color: "red" }}>{error}</div>}
-        <button type="submit">Войти</button>
-      </form>
+    <div className={styles.container}>
+      <div className={styles.card}>
+        <h2 className={styles.title}>Вход в аккаунт</h2>
+        <form onSubmit={handleLogin} className={styles.form}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            required
+            onChange={(e) => setEmail(e.target.value)}
+            className={styles.input}
+          />
+          <input
+            type="password"
+            placeholder="Пароль"
+            value={password}
+            required
+            onChange={(e) => setPassword(e.target.value)}
+            className={styles.input}
+          />
+          {error && <div className={styles.error}>{error}</div>}
+          <button type="submit" className={styles.button}>
+            Войти
+          </button>
+        </form>
+        <p className={styles.footer}>
+          Нет аккаунта?{' '}
+          <span onClick={() => navigate('/register')} className={styles.link}>
+            Зарегистрироваться
+          </span>
+        </p>
+      </div>
     </div>
   );
 }
