@@ -1,0 +1,169 @@
+{
+  "users": [
+    {
+      "id": "00c4",
+      "email": "dilnaz@mail.ru",
+      "password": "12345678"
+    },
+    {
+      "id": "f9ee",
+      "email": "as@mail.ru",
+      "password": "123"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "e6e3",
+      "type": "income",
+      "amount": 1,
+      "category": " степа",
+      "date": "2025-05-05",
+      "userId": "00c4"
+    },
+    {
+      "id": "131b",
+      "type": "income",
+      "amount": 1000,
+      "category": " степа",
+      "date": "2025-04-28",
+      "userId": "00c4"
+    },
+    {
+      "id": "37b2",
+      "type": "expense",
+      "amount": 97,
+      "category": "дильназ шоппинг",
+      "date": "2025-05-01",
+      "userId": "00c4"
+    },
+    {
+      "id": "025d",
+      "type": "expense",
+      "amount": 1,
+      "category": "дильназ шоппинг",
+      "date": "2025-05-31",
+      "userId": "00c4"
+    },
+    {
+      "id": "48da",
+      "type": "expense",
+      "amount": 1,
+      "category": "TAMAK",
+      "date": "2025-04-18",
+      "userId": "00c4"
+    },
+    {
+      "id": "e1d9",
+      "type": "expense",
+      "amount": 34,
+      "category": "KAFE",
+      "date": "2025-05-24",
+      "userId": "00c4"
+    },
+    {
+      "id": "62ea",
+      "type": "expense",
+      "amount": 45,
+      "category": "дильназ шоппинг",
+      "date": "2025-04-25",
+      "userId": "00c4"
+    },
+    {
+      "id": "6ed7",
+      "type": "income",
+      "amount": 654,
+      "category": "MAMA",
+      "date": "2025-05-16",
+      "userId": "00c4"
+    },
+    {
+      "id": "7813",
+      "type": "income",
+      "amount": 9,
+      "category": "MAMA",
+      "date": "2025-05-13",
+      "userId": "00c4"
+    },
+    {
+      "id": "a89f",
+      "type": "income",
+      "amount": 543,
+      "category": "BANK",
+      "date": "2025-04-10",
+      "userId": "00c4"
+    }
+  ],
+  "categories": [
+    {
+      "id": "29dc",
+      "name": "as",
+      "icon": "📁",
+      "color": "#3498db",
+      "userId": "f9ee"
+    },
+    {
+      "id": "6d3f",
+      "name": "дильназ шоппинг",
+      "icon": "📁",
+      "type": "expense",
+      "color": "#f07f7f",
+      "userId": "00c4"
+    },
+    {
+      "id": "ee5f",
+      "name": " степа",
+      "icon": "📁",
+      "type": "income",
+      "color": "#26ab2f",
+      "userId": "00c4"
+    },
+    {
+      "id": "2d97",
+      "name": "AS",
+      "icon": "📁",
+      "type": "income",
+      "color": "#0fffe3",
+      "userId": "f9ee"
+    },
+    {
+      "id": "3441",
+      "name": "AS NSAKML",
+      "icon": "📁",
+      "type": "expense",
+      "color": "#d58585",
+      "userId": "f9ee"
+    },
+    {
+      "id": "9402",
+      "name": "BANK",
+      "icon": "📁",
+      "type": "income",
+      "color": "#3d5cd6",
+      "userId": "00c4"
+    },
+    {
+      "id": "2e0d",
+      "name": "MAMA",
+      "icon": "📁",
+      "type": "income",
+      "color": "#3de6bc",
+      "userId": "00c4"
+    },
+    {
+      "id": "00f3",
+      "name": "TAMAK",
+      "icon": "📁",
+      "type": "expense",
+      "color": "#764c85",
+      "userId": "00c4"
+    },
+    {
+      "id": "93cb",
+      "name": "KAFE",
+      "icon": "📁",
+      "type": "expense",
+      "color": "#500707",
+      "userId": "00c4"
+    }
+  ]
+}
