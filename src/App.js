@@ -21,14 +21,14 @@ function App() {
           </PrivateRoute>
         }
       />
-      {/* <Route
+      <Route
         path="/stats"
         element={
           <PrivateRoute>
             <Stats />
           </PrivateRoute>
         }
-      /> */}
+      />
       <Route
         path="/settings"
         element={
