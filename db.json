@@ -55,27 +55,11 @@
       "userId": "00c4"
     },
     {
-      "id": "48da",
-      "type": "expense",
-      "amount": 1,
-      "category": "TAMAK",
-      "date": "2025-04-18",
-      "userId": "00c4"
-    },
-    {
       "id": "e1d9",
       "type": "expense",
       "amount": 34,
       "category": "KAFE",
       "date": "2025-05-24",
-      "userId": "00c4"
-    },
-    {
-      "id": "62ea",
-      "type": "expense",
-      "amount": 45,
-      "category": "дильназ шоппинг",
-      "date": "2025-04-25",
       "userId": "00c4"
     },
     {
@@ -101,6 +85,30 @@
       "category": "BANK",
       "date": "2025-04-10",
       "userId": "00c4"
+    },
+    {
+      "id": "6062",
+      "type": "income",
+      "amount": 46,
+      "category": " степа",
+      "date": "2025-05-16",
+      "userId": "00c4"
+    },
+    {
+      "id": "9b13",
+      "type": "expense",
+      "amount": 456,
+      "category": "дильназ шоппинг",
+      "date": "2025-04-29",
+      "userId": "00c4"
+    },
+    {
+      "id": "c0c0",
+      "type": "expense",
+      "amount": 465,
+      "category": "TAMAK",
+      "date": "2025-06-06",
+      "userId": "00c4"
     }
   ],
   "categories": [
@@ -116,7 +124,7 @@
       "name": "дильназ шоппинг",
       "icon": "📁",
       "type": "expense",
-      "color": "#f07f7f",
+      "color": "#009dff",
       "userId": "00c4"
     },
     {
@@ -164,7 +172,7 @@
       "name": "TAMAK",
       "icon": "📁",
       "type": "expense",
-      "color": "#764c85",
+      "color": "#bb00ff",
       "userId": "00c4"
     },
     {
@@ -172,7 +180,15 @@
       "name": "KAFE",
       "icon": "📁",
       "type": "expense",
-      "color": "#500707",
+      "color": "#ff0000",
+      "userId": "00c4"
+    },
+    {
+      "id": "ed76",
+      "name": "ref",
+      "icon": "2ytdgrf",
+      "type": "expense",
+      "color": "#ff7b00",
       "userId": "00c4"
     },
     {
