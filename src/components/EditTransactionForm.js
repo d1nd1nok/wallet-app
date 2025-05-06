@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateTransaction } from "../redux/slices/transactionSlice";
+import styles from "./EditTransactionForm.module.css";
 
 const EditTransactionForm = ({ transaction, onClose }) => {
   const dispatch = useDispatch();
   const categories = useSelector((state) => state.categories.items || []);
 
-  const [formData, setFormData] = useState({
-    ...transaction,
-  });
+  const [formData, setFormData] = useState({ ...transaction });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,19 +20,20 @@ const EditTransactionForm = ({ transaction, onClose }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(updateTransaction(formData));
-    onClose(); // Закрыть форму после обновления
+    onClose();
   };
 
   return (
-    <div style={{ border: "1px solid #ccc", padding: "10px", marginTop: "10px" }}>
-      <h4>Редактировать транзакцию</h4>
-      <form onSubmit={handleSubmit}>
+    <div className={styles.container}>
+      <h4 className={styles.header}>Редактировать транзакцию</h4>
+      <form onSubmit={handleSubmit} className={styles.form}>
         <input
           type="date"
           name="date"
           value={formData.date}
           onChange={handleChange}
           required
+          className={styles.input}
         />
         <input
           type="number"
@@ -41,9 +41,16 @@ const EditTransactionForm = ({ transaction, onClose }) => {
           value={formData.amount}
           onChange={handleChange}
           required
+          className={styles.input}
         />
-        <button type="submit">Сохранить</button>
-        <button type="button" onClick={onClose}>Отмена</button>
+        <div className={styles.actions}>
+          <button type="submit" className={styles.saveBtn}>
+            Сохранить
+          </button>
+          <button type="button" onClick={onClose} className={styles.cancelBtn}>
+            Отмена
+          </button>
+        </div>
       </form>
     </div>
   );
