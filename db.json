@@ -42,51 +42,11 @@
       "userId": "00c4"
     },
     {
-      "id": "025d",
-      "type": "expense",
-      "amount": 1,
-      "category": "дильназ шоппинг",
-      "date": "2025-05-31",
-      "userId": "00c4"
-    },
-    {
-      "id": "e1d9",
-      "type": "expense",
-      "amount": 34,
-      "category": "KAFE",
-      "date": "2025-05-24",
-      "userId": "00c4"
-    },
-    {
-      "id": "6ed7",
-      "type": "income",
-      "amount": 654,
-      "category": "MAMA",
-      "date": "2025-05-16",
-      "userId": "00c4"
-    },
-    {
-      "id": "7813",
-      "type": "income",
-      "amount": 9,
-      "category": "MAMA",
-      "date": "2025-05-13",
-      "userId": "00c4"
-    },
-    {
       "id": "a89f",
       "type": "income",
       "amount": 543,
       "category": "BANK",
       "date": "2025-04-10",
-      "userId": "00c4"
-    },
-    {
-      "id": "6062",
-      "type": "income",
-      "amount": 46,
-      "category": " степа",
-      "date": "2025-05-16",
       "userId": "00c4"
     },
     {
@@ -98,11 +58,27 @@
       "userId": "00c4"
     },
     {
-      "id": "c0c0",
+      "id": "af5b",
+      "type": "income",
+      "amount": 92132,
+      "category": "BANK",
+      "date": "2025-05-07",
+      "userId": "00c4"
+    },
+    {
+      "id": "9876",
       "type": "expense",
-      "amount": 465,
-      "category": "TAMAK",
-      "date": "2025-06-06",
+      "amount": 52530,
+      "category": "ref",
+      "date": "2025-05-07",
+      "userId": "00c4"
+    },
+    {
+      "id": "12b4",
+      "type": "expense",
+      "amount": 8645,
+      "category": "ref",
+      "date": "2025-05-08",
       "userId": "00c4"
     }
   ],
