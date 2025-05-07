@@ -104,9 +104,7 @@ function Dashboard() {
         </div>
       </div>
     )}
-
-
-
+      <h3 className={styles.transactionsHeader}>Последние транзакции:</h3>
       <div className={styles.filterWrapper}>
         <label className={styles.filterLabel}>
           Тип:
@@ -164,7 +162,6 @@ function Dashboard() {
       </div>
 
 
-      <h3 className={styles.transactionsHeader}>Последние транзакции:</h3>
       {pageTransactions.length === 0 ? (
   <p className={styles.noTransactions}>Нет транзакций</p>
 ) : (
