@@ -91,15 +91,20 @@ function Dashboard() {
       <h3 className={styles.balance}>Баланс: {totalBalance.toFixed(2)} ₸</h3>
 
       {!showAddForm ? (
-        <button
-          onClick={() => setShowAddForm(true)}
-          className={styles.addTransactionBtn}
-        >
-          Добавить транзакцию
-        </button>
-      ) : (
-        <AddTransaction onClose={() => setShowAddForm(false)} />
-      )}
+      <button
+        onClick={() => setShowAddForm(true)}
+        className={styles.addTransactionBtn}
+      >
+        Добавить транзакцию
+      </button>
+    ) : (
+      <div className={styles.modalOverlay}>
+        <div className={styles.modalContent}>
+          <AddTransaction onClose={() => setShowAddForm(false)} />
+        </div>
+      </div>
+    )}
+
 
 
       <div className={styles.filterWrapper}>

@@ -222,22 +222,38 @@
   color: #1c5980;
 }
 
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* затемнение */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 16px; /* для небольших отступов по краям на маленьких экранах */
+  box-sizing: border-box;
+}
+
+.modalContent {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  width: 500px;
+  max-width: 100%;
+  padding: 30px 30px 30px 30px;
+  box-sizing: border-box;
+}
+
+
 /* Адаптивность */
 @media (max-width: 768px) {
   .dashboardContainer {
     padding: 20px;
     margin: 20px auto;
-  }
-
-  .greeting {
-    flex-direction: column;
-    align-items: flex-start;
-    font-size: 1.3rem;
-  }
-
-  .filterWrapper {
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .filterSelect,
@@ -294,5 +310,13 @@
 
   .headerLink {
     font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .modalContent {
+    width: 70%;
+    padding: 20px;
+    border-radius: 8px;
   }
 }
