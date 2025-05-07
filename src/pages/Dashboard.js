@@ -165,17 +165,23 @@ function Dashboard() {
 ) : (
   <ul className={styles.transactionList}>
     {pageTransactions.map((tx) => (
-      <li key={tx.id} className={styles.transactionItem}>
-        <span className={styles.transactionText}>
-          [{tx.date}]{" "}
-          <span className={styles.category} style={getCategoryStyle(tx.category)}>
-            {tx.category}
-          </span>:{" "}
-          <span className={styles.amount}>
-            {tx.type === "income" ? "+" : "-"}
-            {tx.amount} ₸
-          </span>
-        </span>
+       <li key={tx.id} className={styles.transactionItem}>
+       <span className={styles.transactionContent}>
+         <span className={styles.transactionText}>
+           [{tx.date}]{" "}
+           <span className={styles.category} style={getCategoryStyle(tx.category)}>
+             {tx.category}
+           </span>
+         </span>
+         <span
+           className={`${styles.amount} ${
+             tx.type === "income" ? styles.income : styles.expense
+           }`}
+         >
+           {tx.type === "income" ? "+" : "-"}
+           {tx.amount} ₸
+         </span>
+       </span>
 
         <div className={styles.transactionActions}>
           <button

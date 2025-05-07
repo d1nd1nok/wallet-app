@@ -48,6 +48,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  font-size: 1.05rem;
 }
 
 .filterSelect {
@@ -90,8 +91,16 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
+.transactionContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 30px;
+  padding-left: 20px;
+}
+
 .transactionText {
-  font-size: 1rem;
+  font-size: 1.15rem;
   color: #2c3e50;
 }
 
@@ -102,9 +111,20 @@
 
 .amount {
   font-weight: 600;
+  font-weight: bold;
+  font-size: 1.15rem;
 }
 
+.income {
+  color: green;
+}
+
+.expense {
+  color: red;
+}   
+
 .transactionActions {
+  padding-left: 20px;
   margin-top: 8px;
   display: flex;
   flex-wrap: wrap;
