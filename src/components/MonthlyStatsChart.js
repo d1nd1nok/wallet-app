@@ -8,6 +8,8 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import styles from "./MonthlyStatsChart.module.css";
+
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
@@ -16,7 +18,7 @@ const MonthlyStatsChart = ({ transactions }) => {
 
   // Проверка на загрузку данных
   if (!transactions || transactions.length === 0) {
-    return <p>Нет данных для отображения статистики.</p>;
+    return <p style={{ textAlign: "center", fontSize: "18px" }}>Нет данных для отображения статистики.</p>;
   }
 
   const getYearOptions = () => {
@@ -70,6 +72,12 @@ const MonthlyStatsChart = ({ transactions }) => {
     plugins: {
       legend: {
         position: "top",
+        labels: {
+          font: {
+            size: 14,
+            family: "'Inter', sans-serif",
+          },
+        },
       },
     },
     scales: {
@@ -85,13 +93,16 @@ const MonthlyStatsChart = ({ transactions }) => {
   };
 
   return (
-    <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-      <div style={{ textAlign: "right", marginBottom: "10px" }}>
-        <label htmlFor="year">Год: </label>
+    <div className={styles.container}>
+      <h2 className={styles.title}>Месячная статистика доходов и расходов</h2>
+
+      <div className={styles.controls}>
+        <label htmlFor="year" className={styles.label}>Год: </label>
         <select
           id="year"
           value={year}
           onChange={(e) => setYear(e.target.value)}
+          className={styles.select}
         >
           {getYearOptions().map((y) => (
             <option key={y} value={y}>
@@ -100,6 +111,7 @@ const MonthlyStatsChart = ({ transactions }) => {
           ))}
         </select>
       </div>
+
       <Bar data={data} options={options} />
     </div>
   );

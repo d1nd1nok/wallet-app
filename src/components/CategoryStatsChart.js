@@ -2,6 +2,7 @@ import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { useSelector } from "react-redux";
 import React, { useState } from "react";
+import styles from "./CategoryStats.module.css";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -19,7 +20,7 @@ const StatsChart = () => {
   const [selectedMonth, setSelectedMonth] = useState("all");
 
   if (!transactions || transactions.length === 0) {
-    return <p>Нет данных для отображения статистики.</p>;
+    return <p className={styles.emptyMessage}>Нет данных для отображения статистики.</p>;
   }
 
   // Получение доступных годов и месяцев
@@ -74,24 +75,36 @@ const StatsChart = () => {
   const options = {
     plugins: {
       legend: {
-        position: "right",
+        position: "bottom",
+        labels:{
+          boxWidth:20,
+          padding: 15,
+        },
       },
     },
   };
 
   return (
-    <div style={{ padding: 20 }}>
-      <h2>Статистика по доходам и расходам</h2>
+    <div className={styles.container}>
+      <h2 className={styles.title}>Статистика по доходам и расходам</h2>
 
-      <div style={{ display: "flex", gap: 10, marginBottom: 20 }}>
-        <select value={selectedYear} onChange={e => setSelectedYear(e.target.value)}>
+      <div className={styles.filters}>
+        <select
+          className={styles.select}
+          value={selectedYear}
+          onChange={e => setSelectedYear(e.target.value)}
+        >
           <option value="all">Все годы</option>
           {years.map((year, idx) => (
             <option key={idx} value={year}>{year}</option>
           ))}
         </select>
 
-        <select value={selectedMonth} onChange={e => setSelectedMonth(e.target.value)}>
+        <select
+          className={styles.select}
+          value={selectedMonth}
+          onChange={e => setSelectedMonth(e.target.value)}
+        >
           <option value="all">Все месяцы</option>
           {monthNames.map((name, index) => (
             <option key={index} value={index + 1}>{name}</option>
@@ -99,20 +112,20 @@ const StatsChart = () => {
         </select>
       </div>
 
-      <div style={{ display: "flex", gap: "30px" }}>
-        <div style={{ width: "48%" }}>
-          <h3>Доходы</h3>
+      <div className={styles.chartWrapper}>
+        <div className={styles.chartBlock}>
+          <h3 className={styles.chartTitle}>Доходы</h3>
           {Object.keys(incomeCategoryTotals).length === 0 ? (
-            <p>Нет данных за выбранный период для доходов.</p>
+            <p className={styles.noData}>Нет данных за выбранный период для доходов.</p>
           ) : (
             <Doughnut data={incomeData} options={options} />
           )}
         </div>
 
-        <div style={{ width: "48%" }}>
-          <h3>Расходы</h3>
+        <div className={styles.chartBlock}>
+          <h3 className={styles.chartTitle}>Расходы</h3>
           {Object.keys(expenseCategoryTotals).length === 0 ? (
-            <p>Нет данных за выбранный период для расходов.</p>
+            <p className={styles.noData}>Нет данных за выбранный период для расходов.</p>
           ) : (
             <Doughnut data={expenseData} options={options} />
           )}
