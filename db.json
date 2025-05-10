@@ -34,7 +34,7 @@
       "id": "131b",
       "type": "income",
       "amount": 1000,
-      "category": " степа",
+      "category": "степа",
       "date": "2025-04-28",
       "userId": "00c4"
     },
@@ -79,11 +79,11 @@
       "userId": "00c4"
     },
     {
-      "id": "12b4",
-      "type": "expense",
-      "amount": 8645,
-      "category": "ref",
-      "date": "2025-05-08",
+      "id": "6f64",
+      "type": "income",
+      "amount": 2345,
+      "category": "MAMA",
+      "date": "2024-04-15",
       "userId": "00c4"
     }
   ],
@@ -132,7 +132,7 @@
       "name": "BANK",
       "icon": "📁",
       "type": "income",
-      "color": "#3d5cd6",
+      "color": "#24d651",
       "userId": "00c4"
     },
     {
@@ -190,6 +190,14 @@
       "type": "expense",
       "color": "#cccccc",
       "userId": "e0b5"
+    },
+    {
+      "id": "659c",
+      "name": "Путешествие",
+      "icon": "✈",
+      "type": "expense",
+      "color": "#b9ccf8",
+      "userId": "00c4"
     }
   ]
 }
