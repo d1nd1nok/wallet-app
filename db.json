@@ -61,6 +61,38 @@
       "categoryId": "659c",
       "date": "2025-05-30",
       "userId": "00c4"
+    },
+    {
+      "id": "a8db",
+      "type": "income",
+      "amount": 20000,
+      "categoryId": "2e0d",
+      "date": "2025-05-07",
+      "userId": "00c4"
+    },
+    {
+      "id": "9de4",
+      "type": "income",
+      "amount": 5235,
+      "categoryId": "9402",
+      "date": "2024-08-15",
+      "userId": "00c4"
+    },
+    {
+      "id": "c239",
+      "type": "expense",
+      "amount": 4625,
+      "categoryId": "00f3",
+      "date": "2025-02-06",
+      "userId": "00c4"
+    },
+    {
+      "id": "5958",
+      "type": "income",
+      "amount": 634,
+      "categoryId": "2e0d",
+      "date": "2025-01-30",
+      "userId": "00c4"
     }
   ],
   "categories": [
@@ -81,10 +113,10 @@
     },
     {
       "id": "ee5f",
-      "name": " степаk",
+      "name": "Степа",
       "icon": "📁",
       "type": "income",
-      "color": "#c8bdff",
+      "color": "#634cd6",
       "userId": "00c4"
     },
     {

@@ -15,6 +15,7 @@ const StatsChart = () => {
 
   const transactions = useSelector((state) => state.transactions.list);
   const categoriesFromStore = useSelector((state) => state.categories.items);
+  console.log("categoriesFromStore", categoriesFromStore);
 
   const [selectedYear, setSelectedYear] = useState("all");
   const [selectedMonth, setSelectedMonth] = useState("all");
@@ -39,19 +40,23 @@ const StatsChart = () => {
   const getCategoryTotals = (type) => {
     return filteredTransactions.reduce((acc, t) => {
       if (t.type === type) {
-        acc[t.category] = (acc[t.category] || 0) + Number(t.amount);
+        const category = categoriesFromStore?.find(c => c.id === t.categoryId);
+        const categoryName = category?.name || "Неизвестно";
+        acc[categoryName] = (acc[categoryName] || 0) + Number(t.amount);
       }
       return acc;
     }, {});
   };
 
+
   const incomeCategoryTotals = getCategoryTotals("income");
   const expenseCategoryTotals = getCategoryTotals("expense");
 
   const getCategoryColor = (categoryName) => {
-    const category = categoriesFromStore?.find(c => c.name === categoryName);
-    return category?.color || "#ccc"; 
+  const category = categoriesFromStore?.find(c => c.name === categoryName);
+  return category?.color || "#ccc";
   };
+
 
   const createChartData = (categoryTotals) => {
     const categories = Object.keys(categoryTotals);

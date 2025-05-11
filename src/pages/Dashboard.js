@@ -75,7 +75,7 @@ function Dashboard() {
   return (
     <div className={styles.dashboardContainer}>
       <div className={styles.greeting}>
-        <span>Привет, {user}!</span>
+        <span>{user} &lt;- гей</span>
         <div>
         <Link to="/stats" className={styles.headerLink}>
             Статистика
