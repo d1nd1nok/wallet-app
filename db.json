@@ -23,67 +23,43 @@
   ],
   "transactions": [
     {
-      "id": "e6e3",
+      "id": "bd2e",
       "type": "income",
-      "amount": 1,
-      "category": " степа",
-      "date": "2025-05-05",
+      "amount": 55000,
+      "categoryId": "9402",
+      "date": "2025-05-11",
       "userId": "00c4"
     },
     {
-      "id": "131b",
+      "id": "e38a",
       "type": "income",
-      "amount": 1000,
-      "category": "степа",
-      "date": "2025-04-28",
+      "amount": 10000,
+      "categoryId": "9402",
+      "date": "2025-05-12",
       "userId": "00c4"
     },
     {
-      "id": "37b2",
+      "id": "fc5a",
+      "type": "income",
+      "amount": 465,
+      "categoryId": "2e0d",
+      "date": "2025-05-11",
+      "userId": "00c4"
+    },
+    {
+      "id": "c0bf",
+      "type": "income",
+      "amount": 8465,
+      "categoryId": "ee5f",
+      "date": "2025-05-13",
+      "userId": "00c4"
+    },
+    {
+      "id": "5f4c",
       "type": "expense",
-      "amount": 97,
-      "category": "дильназ шоппинг",
-      "date": "2025-05-01",
-      "userId": "00c4"
-    },
-    {
-      "id": "a89f",
-      "type": "income",
-      "amount": 543,
-      "category": "BANK",
-      "date": "2025-04-10",
-      "userId": "00c4"
-    },
-    {
-      "id": "9b13",
-      "type": "expense",
-      "amount": 456,
-      "category": "дильназ шоппинг",
-      "date": "2025-04-29",
-      "userId": "00c4"
-    },
-    {
-      "id": "af5b",
-      "type": "income",
-      "amount": 92132,
-      "category": "BANK",
-      "date": "2025-05-07",
-      "userId": "00c4"
-    },
-    {
-      "id": "9876",
-      "type": "expense",
-      "amount": 52530,
-      "category": "ref",
-      "date": "2025-05-07",
-      "userId": "00c4"
-    },
-    {
-      "id": "6f64",
-      "type": "income",
-      "amount": 2345,
-      "category": "MAMA",
-      "date": "2024-04-15",
+      "amount": 89465,
+      "categoryId": "659c",
+      "date": "2025-05-30",
       "userId": "00c4"
     }
   ],
@@ -105,10 +81,10 @@
     },
     {
       "id": "ee5f",
-      "name": " степа",
+      "name": " степаk",
       "icon": "📁",
       "type": "income",
-      "color": "#26ab2f",
+      "color": "#c8bdff",
       "userId": "00c4"
     },
     {
