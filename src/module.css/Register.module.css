@@ -3,12 +3,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #1A2d42;
+    background: #fff;
     padding: 20px;
   }
   
   .card {
-    background: #F6F2EE;
+    background: #fff;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     max-width: 400px;
@@ -44,7 +44,7 @@
   
   .button {
     padding: 12px 16px;
-    background: #1a2d42;
+    background: #4caf50;
     color: #F6F2EE;
     font-size: 16px;
     font-weight: 500;
