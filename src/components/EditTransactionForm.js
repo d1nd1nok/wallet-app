@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateTransaction } from "../redux/slices/transactionSlice";
 import styles from "../module.css/EditTransactionForm.module.css";
@@ -30,7 +30,6 @@ const EditTransactionForm = ({ transaction, onClose }) => {
     <div className={styles.container}>
       <h4 className={styles.header}>Редактировать транзакцию</h4>
       <form onSubmit={handleSubmit} className={styles.form}>
-        {/* Тип (доход/расход) */}
         <select
           name="type"
           value={formData.type}
@@ -41,7 +40,6 @@ const EditTransactionForm = ({ transaction, onClose }) => {
           <option value="expense">Расход</option>
         </select>
 
-        {/* Категория */}
         <select
           name="categoryId"
           value={formData.categoryId}
@@ -57,7 +55,6 @@ const EditTransactionForm = ({ transaction, onClose }) => {
           ))}
         </select>
 
-        {/* Дата */}
         <input
           type="date"
           name="date"
@@ -67,7 +64,6 @@ const EditTransactionForm = ({ transaction, onClose }) => {
           className={styles.input}
         />
 
-        {/* Сумма */}
         <input
           type="number"
           name="amount"

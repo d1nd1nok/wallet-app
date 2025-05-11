@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useState, useEffect } from "react";
+import { useDispatch} from "react-redux";
 import { fetchCategories, addCategory } from "../redux/slices/categorySlice";
 import styles from "../module.css/AddCategoryForm.module.css";
 

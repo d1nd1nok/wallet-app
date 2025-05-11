@@ -228,12 +228,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* затемнение */
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  padding: 16px; /* для небольших отступов по краям на маленьких экранах */
+  padding: 16px;
   box-sizing: border-box;
 }
 

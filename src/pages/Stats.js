@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import MonthlyStatsChart from "../components/MonthlyStatsChart";
 import { fetchTransactions } from "../redux/slices/transactionSlice";
 import CategoryStatsChart from "../components/CategoryStatsChart";

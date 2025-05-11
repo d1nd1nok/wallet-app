@@ -21,7 +21,7 @@
   
   .controls {
     display: flex;
-    justify-content: center; /* Центрируем по горизонтали */
+    justify-content: center;
     align-items: center;
     margin-bottom: 20px;
     gap: 10px;

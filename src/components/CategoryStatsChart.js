@@ -1,7 +1,7 @@
 import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { useSelector } from "react-redux";
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "../module.css/CategoryStats.module.css";
 
 ChartJS.register(ArcElement, Tooltip, Legend);

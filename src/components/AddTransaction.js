@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCategories } from "../redux/slices/categorySlice";
 import { addTransaction } from "../redux/slices/transactionSlice";
@@ -9,7 +9,7 @@ const AddTransaction = ({ onClose }) => {
   const categories = useSelector((state) => state.categories.items);
   const [type, setType] = useState("income");
   const [amount, setAmount] = useState("");
-  const [categoryId, setCategoryId] = useState(""); // исправлено здесь
+  const [categoryId, setCategoryId] = useState("");
   const [date, setDate] = useState("");
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const AddTransaction = ({ onClose }) => {
 
     dispatch(addTransaction(transaction));
     setAmount("");
-    setCategoryId(""); // сброс тоже исправлен
+    setCategoryId("");
     setDate("");
     if (onClose) onClose();
   };
