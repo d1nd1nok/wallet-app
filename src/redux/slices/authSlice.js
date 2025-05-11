@@ -1,4 +1,3 @@
-// redux/slices/authSlice.js
 import { createSlice } from "@reduxjs/toolkit";
 
 const authSlice = createSlice({
@@ -14,7 +13,6 @@ const authSlice = createSlice({
       state.userId = action.payload.userId;
       state.token = action.payload.token;
 
-      // сохраняем всё в localStorage
       localStorage.setItem("user", action.payload.user);
       localStorage.setItem("userId", action.payload.userId);
       localStorage.setItem("token", action.payload.token);

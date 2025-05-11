@@ -14,7 +14,7 @@ const StatsChart = () => {
   ];
 
   const transactions = useSelector((state) => state.transactions.list);
-  const categoriesFromStore = useSelector((state) => state.categories.items); // Извлекаем категории из Redux
+  const categoriesFromStore = useSelector((state) => state.categories.items);
 
   const [selectedYear, setSelectedYear] = useState("all");
   const [selectedMonth, setSelectedMonth] = useState("all");
@@ -23,11 +23,11 @@ const StatsChart = () => {
     return <p className={styles.emptyMessage}>Нет данных для отображения статистики.</p>;
   }
 
-  // Получение доступных годов и месяцев
+ 
   const years = Array.from(new Set(transactions.map(t => new Date(t.date).getFullYear())));
-  const months = Array.from({ length: 12 }, (_, i) => i + 1); // [1...12]
+  const months = Array.from({ length: 12 }, (_, i) => i + 1);
 
-  // Фильтрация по дате
+  
   const filteredTransactions = transactions.filter(t => {
     const date = new Date(t.date);
     const yearMatch = selectedYear === "all" || date.getFullYear() === Number(selectedYear);
@@ -35,7 +35,7 @@ const StatsChart = () => {
     return yearMatch && monthMatch;
   });
 
-  // Функция для вычисления статистики (доходы или расходы)
+  
   const getCategoryTotals = (type) => {
     return filteredTransactions.reduce((acc, t) => {
       if (t.type === type) {
@@ -50,7 +50,7 @@ const StatsChart = () => {
 
   const getCategoryColor = (categoryName) => {
     const category = categoriesFromStore?.find(c => c.name === categoryName);
-    return category?.color || "#ccc";  // дефолтный цвет серый
+    return category?.color || "#ccc"; 
   };
 
   const createChartData = (categoryTotals) => {
@@ -62,7 +62,7 @@ const StatsChart = () => {
       datasets: [
         {
           data: totals,
-          backgroundColor: categories.map(cat => getCategoryColor(cat)), // Используем цвет из категории
+          backgroundColor: categories.map(cat => getCategoryColor(cat)),
           borderWidth: 1,
         },
       ],

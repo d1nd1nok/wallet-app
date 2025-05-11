@@ -1,4 +1,3 @@
-// pages/Register.js
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -13,7 +12,6 @@ function Register() {
     e.preventDefault();
 
     try {
-      // Проверяем, есть ли уже такой пользователь
       const { data: users } = await axios.get("http://localhost:3001/users");
       const exists = users.find((u) => u.email === email);
 

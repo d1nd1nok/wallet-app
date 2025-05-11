@@ -30,7 +30,6 @@ const AddCategoryForm = ({ onClose }) => {
       userId,
     }));
 
-    // сброс полей
     setName("");
     setIcon("");
     setType("income");

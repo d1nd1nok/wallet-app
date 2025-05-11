@@ -16,7 +16,7 @@ ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 const MonthlyStatsChart = ({ transactions }) => {
   const [year, setYear] = useState(new Date().getFullYear());
 
-  // Проверка на загрузку данных
+ 
   if (!transactions || transactions.length === 0) {
     return <p style={{ textAlign: "center", fontSize: "18px" }}>Нет данных для отображения статистики.</p>;
   }
@@ -35,7 +35,7 @@ const MonthlyStatsChart = ({ transactions }) => {
           new Date(tx.date).getFullYear() === Number(year)
       )
       .forEach((tx) => {
-        const month = new Date(tx.date).getMonth(); // 0 - январь
+        const month = new Date(tx.date).getMonth();
         totals[month] += Number(tx.amount);
       });
     return totals;
