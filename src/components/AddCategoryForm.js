@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCategories, addCategory } from "../redux/slices/categorySlice";
-import styles from "./AddCategoryForm.module.css";
+import styles from "../module.css/AddCategoryForm.module.css";
 
 const DEFAULT_ICON = "💰";
 const DEFAULT_COLOR = "#cccccc";

@@ -6,7 +6,7 @@ import EditTransactionForm from "../components/EditTransactionForm";
 import { fetchTransactions, deleteTransaction } from "../redux/slices/transactionSlice";
 import { fetchCategories } from "../redux/slices/categorySlice";
 import { logout } from "../redux/slices/authSlice";
-import styles from "./Dashboard.module.css";
+import styles from "../module.css/Dashboard.module.css";
 import { Link } from "react-router-dom";
 import { MdEditSquare } from "react-icons/md";
 import { IoMdTrash } from "react-icons/io";
@@ -50,8 +50,8 @@ function Dashboard() {
     }
   };
 
-  const getCategoryStyle = (categoryName) => {
-    const cat = categories.find((c) => c.name === categoryName);
+  const getCategoryStyle = (categoryId) => {
+    const cat = categories.find((c) => c.id === categoryId);
     return { color: cat?.color || "#000" };
   };
 
@@ -165,25 +165,31 @@ function Dashboard() {
       {pageTransactions.length === 0 ? (
   <p className={styles.noTransactions}>Нет транзакций</p>
 ) : (
-  <ul className={styles.transactionList}>
-    {pageTransactions.map((tx) => (
-       <li key={tx.id} className={styles.transactionItem}>
-       <span className={styles.transactionContent}>
-         <span className={styles.transactionText}>
-           [{tx.date}]{" "}
-           <span className={styles.category} style={getCategoryStyle(tx.category)}>
-             {tx.category}
-           </span>
-         </span>
-         <span
-           className={`${styles.amount} ${
-             tx.type === "income" ? styles.income : styles.expense
-           }`}
-         >
-           {tx.type === "income" ? "+" : "-"}
-           {tx.amount} ₸
-         </span>
-       </span>
+ <ul className={styles.transactionList}>
+  {pageTransactions.map((tx) => {
+    const cat = categories.find((c) => c.id === tx.categoryId);
+    const name = cat?.name ;
+    const icon = cat?.icon ;
+    const color = cat?.color ;
+
+    return (
+      <li key={tx.id} className={styles.transactionItem}>
+        <span className={styles.transactionContent}>
+          <span className={styles.transactionText}>
+            [{tx.date}]{" "}
+            <span className={styles.category} style={{ color }}>
+              {icon} {name}
+            </span>
+          </span>
+          <span
+            className={`${styles.amount} ${
+              tx.type === "income" ? styles.income : styles.expense
+            }`}
+          >
+            {tx.type === "income" ? "+" : "-"}
+            {tx.amount} ₸
+          </span>
+        </span>
 
         <div className={styles.transactionActions}>
           <button
@@ -191,15 +197,15 @@ function Dashboard() {
             className={styles.editBtn}
             title="Редактировать"
           >
-          <MdEditSquare />
+            <MdEditSquare />
           </button>
           <button
             onClick={() => handleDelete(tx.id)}
             className={styles.deleteBtn}
             title="Удалить"
           >
-           <IoMdTrash />
-           </button>
+            <IoMdTrash />
+          </button>
         </div>
 
         {editingTx?.id === tx.id && (
@@ -209,8 +215,10 @@ function Dashboard() {
           />
         )}
       </li>
-    ))}
-  </ul>
+    );
+  })}
+</ul>
+
 )}
 
       {totalPages > 1 && (

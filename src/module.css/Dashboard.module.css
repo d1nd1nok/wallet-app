@@ -1,0 +1,322 @@
+.dashboardContainer {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fefefe;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+.greeting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logoutBtn {
+  background-color: #e74c3c;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.logoutBtn:hover {
+  background-color: #c0392b;
+}
+
+.balance {
+  font-size: 1.3rem;
+  color: #27ae60;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.filterWrapper {
+  margin: 20px 0;
+  font-weight: 500;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 1.05rem;
+}
+
+.filterSelect {
+  margin-left: 10px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.filterLabel {
+  margin-right: 10px;
+}
+
+.transactionsHeader {
+  font-size: 1.3rem;
+  margin: 30px 0 15px;
+  color: #34495e;
+}
+
+.transactionList {
+  list-style: none;
+  padding: 0;
+}
+
+.transactionItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f4f6f8;
+  border-left: 5px solid #3498db;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.transactionItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.transactionContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 30px;
+  padding-left: 20px;
+}
+
+.transactionText {
+  font-size: 1.15rem;
+  color: #2c3e50;
+}
+
+.category {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.amount {
+  font-weight: 600;
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+.income {
+  color: green;
+}
+
+.expense {
+  color: red;
+}   
+
+.transactionActions {
+  padding-left: 20px;
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.editBtn,
+.deleteBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+
+.editBtn:hover,
+.deleteBtn:hover {
+  transform: scale(1.2);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.pagination button:hover {
+  background-color: #ddd;
+}
+
+.resetBtn {
+  margin-left: 12px;
+  padding: 6px 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.resetBtn:hover {
+  background-color: #e0e0e0;
+}
+
+.addTransactionBtn {
+  margin-top: 16px;
+  padding: 10px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.dateInput {
+  margin-left: 8px;
+  padding: 4px 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  font-size: 15px;
+}
+
+.dateInput:focus {
+  outline: none;
+  border-color: #888;
+}
+
+.headerLink {
+  margin-right: 12px;
+  font-size: 1rem;
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.headerLink:hover {
+  color: #1c5980;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* затемнение */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 16px; /* для небольших отступов по краям на маленьких экранах */
+  box-sizing: border-box;
+}
+
+.modalContent {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  width: 500px;
+  max-width: 100%;
+  padding: 30px 30px 30px 30px;
+  box-sizing: border-box;
+}
+
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .dashboardContainer {
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .filterSelect,
+  .resetBtn,
+  .dateInput {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .transactionText {
+    font-size: 0.95rem;
+  }
+
+  .addTransactionBtn {
+    font-size: 0.95rem;
+    padding: 8px 14px;
+    margin: 12px auto 0;
+  }
+
+  .pagination {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboardContainer {
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .greeting {
+    font-size: 1.1rem;
+  }
+
+  .transactionsHeader {
+    font-size: 1.1rem;
+  }
+
+  .transactionText {
+    font-size: 0.9rem;
+  }
+
+  .transactionActions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .editBtn,
+  .deleteBtn {
+    margin-right: 0;
+    margin-top: 6px;
+  }
+
+  .headerLink {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .modalContent {
+    width: 70%;
+    padding: 20px;
+    border-radius: 8px;
+  }
+}
