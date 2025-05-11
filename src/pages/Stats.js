@@ -4,7 +4,7 @@ import MonthlyStatsChart from "../components/MonthlyStatsChart";
 import { fetchTransactions } from "../redux/slices/transactionSlice";
 import { fetchCategories } from "../redux/slices/categorySlice";
 import CategoryStatsChart from "../components/CategoryStatsChart";
-import styles from "./CategorySettings.module.css";
+import styles from "../module.css/CategorySettings.module.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../redux/slices/authSlice";
