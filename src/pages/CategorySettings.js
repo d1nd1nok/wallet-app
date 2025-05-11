@@ -8,7 +8,7 @@ import {
 import { fetchTransactions } from "../redux/slices/transactionSlice";
 import { MdEditSquare } from "react-icons/md";
 import { IoMdTrash } from "react-icons/io";
-import styles from "./CategorySettings.module.css";
+import styles from "../module.css/CategorySettings.module.css";
 import AddCategoryForm from "../components/AddCategoryForm";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateTransaction } from "../redux/slices/transactionSlice";
-import styles from "./EditTransactionForm.module.css";
+import styles from "../module.css/EditTransactionForm.module.css";
 
 const EditTransactionForm = ({ transaction, onClose }) => {
   const dispatch = useDispatch();

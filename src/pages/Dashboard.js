@@ -6,7 +6,7 @@ import EditTransactionForm from "../components/EditTransactionForm";
 import { fetchTransactions, deleteTransaction } from "../redux/slices/transactionSlice";
 import { fetchCategories } from "../redux/slices/categorySlice";
 import { logout } from "../redux/slices/authSlice";
-import styles from "./Dashboard.module.css";
+import styles from "../module.css/Dashboard.module.css";
 import { Link } from "react-router-dom";
 import { MdEditSquare } from "react-icons/md";
 import { IoMdTrash } from "react-icons/io";

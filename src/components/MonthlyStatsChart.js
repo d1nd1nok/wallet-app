@@ -8,7 +8,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import styles from "./MonthlyStatsChart.module.css";
+import styles from "../module.css/MonthlyStatsChart.module.css";
 
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);

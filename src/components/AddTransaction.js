@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCategories } from "../redux/slices/categorySlice";
 import { addTransaction } from "../redux/slices/transactionSlice";
-import styles from "./AddTransaction.module.css";
+import styles from "../module.css/AddTransaction.module.css";
 
 const AddTransaction = ({ onClose }) => {
   const dispatch = useDispatch();

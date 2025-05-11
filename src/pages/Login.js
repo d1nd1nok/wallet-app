@@ -3,7 +3,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { loginSuccess } from "../redux/slices/authSlice";
 import { useNavigate } from "react-router-dom";
-import styles from "./Login.module.css";
+import styles from "../module.css/Login.module.css";
 
 
 function Login() {
