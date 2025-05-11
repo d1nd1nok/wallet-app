@@ -77,10 +77,10 @@ const CategorySettings = () => {
       }
     };
 
-  const getTotalForCategory = (categoryName) => {
+  const getTotalForCategory = (categoryId) => {
     if (!transactions || !Array.isArray(transactions)) return 0;
     return transactions
-      .filter((tx) => tx.category === categoryName)
+      .filter((tx) => tx.categoryId === categoryId)
       .reduce((sum, tx) => sum + tx.amount, 0);
   };
 
@@ -139,11 +139,11 @@ const CategorySettings = () => {
             <span className={styles.total}>
               {type === "income" ? (
                 <span style={{ color: "green" }}>
-                  {getTotalForCategory(cat.name)} ₸
+                  {getTotalForCategory(cat.id)} ₸
                 </span>
               ) : (
                 <span style={{ color: "red" }}>
-                  {getTotalForCategory(cat.name)} ₸
+                  {getTotalForCategory(cat.id)} ₸
                 </span>
               )}
             </span>

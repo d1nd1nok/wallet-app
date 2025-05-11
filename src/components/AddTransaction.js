@@ -9,7 +9,7 @@ const AddTransaction = ({ onClose }) => {
   const categories = useSelector((state) => state.categories.items);
   const [type, setType] = useState("income");
   const [amount, setAmount] = useState("");
-  const [category, setCategory] = useState("");
+  const [categoryId, setCategoryId] = useState(""); // исправлено здесь
   const [date, setDate] = useState("");
 
   useEffect(() => {
@@ -18,22 +18,23 @@ const AddTransaction = ({ onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!amount || !category || !date) return;
+    if (!amount || !categoryId || !date) return;
 
     const userId = localStorage.getItem("userId");
 
     const transaction = {
       type,
       amount: parseFloat(amount),
-      category,
+      categoryId,
       date,
       userId,
     };
 
     dispatch(addTransaction(transaction));
     setAmount("");
-    setCategory("");
+    setCategoryId(""); // сброс тоже исправлен
     setDate("");
+    if (onClose) onClose();
   };
 
   const filteredCategories = categories.filter((cat) => cat.type === type);
@@ -70,13 +71,13 @@ const AddTransaction = ({ onClose }) => {
           <label className={styles.fieldLabel}>Категория</label>
           <select
             className={styles.fieldSelect}
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
+            value={categoryId}
+            onChange={(e) => setCategoryId(e.target.value)}
             required
           >
             <option value="">Выберите категорию</option>
             {filteredCategories.map((cat) => (
-              <option key={cat.id} value={cat.name}>
+              <option key={cat.id} value={cat.id}>
                 {cat.icon} {cat.name}
               </option>
             ))}
